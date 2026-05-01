@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:task_manager/main.dart';
 import 'package:task_manager/models/task.dart';
@@ -9,9 +8,6 @@ import 'package:task_manager/providers/theme_provider.dart';
 import 'package:task_manager/services/hive_service.dart';
 
 class FakeHiveService implements HiveService {
-  @override
-  late Box<Task> _box;
-
   @override
   Future<void> init() async {}
 
