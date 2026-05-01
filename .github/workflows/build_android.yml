@@ -35,6 +35,12 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Download Gradle Wrapper
+        run: |
+          mkdir -p android/gradle/wrapper
+          curl -L -o android/gradle/wrapper/gradle-wrapper.jar \
+            https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar
+
       - name: Configure Flutter
         run: |
           flutter config --no-analytics
