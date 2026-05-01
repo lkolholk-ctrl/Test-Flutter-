@@ -109,7 +109,6 @@ class StatisticsScreen extends StatelessWidget {
   }
 
   Widget _buildCompletionChart(BuildContext context, Map<String, int> data) {
-    final theme = Theme.of(context);
     final completed = data['completed'] ?? 0;
     final pending = data['pending'] ?? 0;
     final total = completed + pending;
@@ -182,7 +181,6 @@ class StatisticsScreen extends StatelessWidget {
   }
 
   Widget _buildCategoryChart(BuildContext context, Map<String, int> stats) {
-    final theme = Theme.of(context);
     final categories = stats.entries.toList();
     if (categories.isEmpty) return const SizedBox();
 

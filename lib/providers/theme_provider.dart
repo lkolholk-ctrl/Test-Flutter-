@@ -19,7 +19,7 @@ class ThemeProvider extends ChangeNotifier {
   }
 
   ThemeData get lightTheme {
-    final seedColor = const Color(0xFF6366F1);
+    const seedColor = Color(0xFF6366F1);
     return ThemeData(
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
@@ -73,12 +73,11 @@ class ThemeProvider extends ChangeNotifier {
         labelStyle: const TextStyle(fontSize: 13),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
-      fontFamily: 'Roboto',
     );
   }
 
   ThemeData get darkTheme {
-    final seedColor = const Color(0xFF818CF8);
+    const seedColor = Color(0xFF818CF8);
     return ThemeData(
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
@@ -134,7 +133,6 @@ class ThemeProvider extends ChangeNotifier {
         labelStyle: const TextStyle(fontSize: 13),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
-      fontFamily: 'Roboto',
     );
   }
 }

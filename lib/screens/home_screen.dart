@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/task_provider.dart';
-import '../providers/theme_provider.dart';
 import 'tasks_screen.dart';
 import 'statistics_screen.dart';
 import 'settings_screen.dart';
+import 'add_task_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -51,7 +51,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final taskProvider = context.watch<TaskProvider>();
 
     return Scaffold(
       body: AnimatedSwitcher(
@@ -64,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
         destinations: _destinations,
         backgroundColor: theme.cardTheme.color,
         indicatorColor: theme.colorScheme.primary.withOpacity(0.15),
-        labelBehavior: NavigationLabelBehavior.alwaysShow,
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
       ),
       floatingActionButton: _currentIndex == 0
           ? FloatingActionButton.extended(

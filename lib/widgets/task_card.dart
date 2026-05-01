@@ -150,7 +150,7 @@ class TaskCard extends StatelessWidget {
     Color? color,
   }) {
     final theme = Theme.of(context);
-    final chipColor = color?.withOpacity(0.1) ?? theme.colorScheme.surfaceVariant.withOpacity(0.5);
+    final chipColor = color?.withOpacity(0.1) ?? theme.colorScheme.surfaceContainerHighest.withOpacity(0.5);
     final textColor = color ?? theme.colorScheme.onSurface.withOpacity(0.7);
 
     return Container(
